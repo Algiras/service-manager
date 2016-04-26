@@ -1,0 +1,35 @@
+{
+  "name": "service-manager",
+  "version": "0.0.1",
+  "stability": 2,
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Algiras/service-manager.git"
+  },
+  "main": "./lib/service-manager",
+  "scripts": {
+    "preversion": "npm test",
+    "test": "node node_modules/lab/bin/lab -c -a code --lint",
+    "test-cov-html": "lab -r html -o coverage.html"
+  },
+  "dependencies": {
+    "async": "^1.5.0",
+    "joi": "6.0.x",
+    "nock": "^8.0.0",
+    "request": "^2.67.0"
+  },
+  "devDependencies": {
+    "code": "1.5.x",
+    "gulp": "^3.9.0",
+    "gulp-eslint": "^1.1.1",
+    "gulp-lab": "^1.0.5",
+    "hapi": "8.x.x",
+    "lab": "7.0.x",
+    "rewire": "^2.5.0",
+    "sinon": "^1.17.2"
+  },
+  "engines": {
+    "node": "0.12.x"
+  }
+}
